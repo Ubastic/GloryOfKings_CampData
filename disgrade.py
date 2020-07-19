@@ -42,12 +42,20 @@ for index,t in enumerate(json_ob):
     json_ob[index]['BlueGrade'] = sumBlue
     json_ob[index]['RedGrade'] = sumRed
     if(t['myPlayCamp']=="red"):
+        if(abs(sumRed-sumBlue)<=10):
+            json_ob[index]['gradeType'] = "均势局"
+            json_ob[index]['gradeTrue'] = "True"
+            continue
         json_ob[index]['gradeType'] = "上分局" if sumRed>sumBlue else "掉分局"
         if(t['win']=="win"):
             json_ob[index]['gradeTrue'] = "True" if sumRed>sumBlue else "False"
         else:
             json_ob[index]['gradeTrue'] = "True" if sumRed<sumBlue else "False"
     else:
+        if(abs(sumRed-sumBlue)<=10):
+            json_ob[index]['gradeType'] = "均势局"
+            json_ob[index]['gradeTrue'] = "True"
+            continue
         json_ob[index]['gradeType'] = "上分局" if sumBlue>sumRed else "掉分局"
         if(t['win']=="win"):
             json_ob[index]['gradeTrue'] = "True" if sumRed<sumBlue else "False"
@@ -59,6 +67,6 @@ for index,t in enumerate(json_ob):
     #time.sleep(1)
 
 
-filename='detailgrade.json'
+filename='detailgrade10.json'
 with open(filename,'w') as file_obj:
     json.dump(json_ob,file_obj)
