@@ -72,7 +72,7 @@ def json_to_csv():
     # for ov in object_list:
         # loop_data(ov)
         # c_line += 1
-    with open("detailgrade10.json", "r") as f:
+    with open("heroextrainfos.json", "r") as f:
         for ov in f :
             ov = json.loads(ov.strip())
             json_ob = ov
@@ -83,6 +83,6 @@ def json_to_csv():
     print(title)
     rows = get_rows(json_ob)
     print(len(rows))
-    write_csv(title, rows, 'detailgrade10.csv')
+    write_csv(title, rows, 'heroextrainfos.csv')
 
 json_to_csv()
