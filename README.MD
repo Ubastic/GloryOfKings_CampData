@@ -9,3 +9,7 @@ list 1 month, but detail save permanently in server. so just need to get detail 
 这个爬虫项目比较久远，王者营地的api可能会变更，主要是用charles抓包，获取headers。
 爬虫是playdetail.py和playhistory.py两个文件，herolist.py可以获取所有英雄数据，主要是找英雄和他们的id。
 其他文件是对爬下来的json进行处理，这部分就看你想要获得什么了。
+
+sql文件是之前fork别人项目遗留的，没啥用，看历史commit可以看出来。
+
+看commit history可以理解这个小项目的开发思路过程
