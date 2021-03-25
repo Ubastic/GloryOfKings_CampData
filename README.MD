@@ -5,3 +5,7 @@ list 1 month, but detail save permanently in server. so just need to get detail 
 部分用户关闭权限，无法获得战力，但是有熟练英雄的战力数据可供参考，以及段位、胜率等。
 
 王者小程序数据过于少，没有什么价值。
+
+这个爬虫项目比较久远，王者营地的api可能会变更，主要是用charles抓包，获取headers。
+爬虫是playdetail.py和playhistory.py两个文件，herolist.py可以获取所有英雄数据，主要是找英雄和他们的id。
+其他文件是对爬下来的json进行处理，这部分就看你想要获得什么了。
